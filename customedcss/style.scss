@@ -1,0 +1,12 @@
+$primary: #c29938;
+
+@import '../sass/variables';
+
+$custom-colors: (
+    'altlight': #f2ebfa,
+    'altdark': #522192
+);
+
+$colors: map-merge($map1: $custom-colors, $map2: $colors);
+
+@import '../sass/main.scss';

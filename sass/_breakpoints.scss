@@ -1,0 +1,28 @@
+$sm: 480px;
+$md: 720px;
+$lg: 960px;
+$xl: 1200px;
+
+@mixin  breakpoints($bp: 0) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
+}
+
+.responsive-test {
+    @include breakpoints() {
+        color: gold;
+    }
+    @include breakpoints($sm) {
+        color: tomato;
+    }
+    @include breakpoints($md) {
+        color: darkslateblue;
+    }
+    @include breakpoints($lg) {
+        color: aqua;
+    }
+    @include breakpoints($xl) {
+        color: cornflowerblue;
+    }
+}
